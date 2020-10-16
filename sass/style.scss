@@ -1,1 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+// a tags in li
+a {
+	//Your choice of color
+	color: white;
+	text-decoration: none;
+
+	// Get rid of purple color when visited
+	&:visited {
+		color: white;
+	}
+}
+
+// items in Ul
+.nav-item {
+	font-size: 1.2rem;
+	list-style: none;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+// Header
+.header-container {
+	.nav {
+		width: 100%;
+		height: 5.625rem;
+		margin: auto;
+		padding: 0px 50px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		// Color of your choice
+		background-color: rgb(32, 156, 238);
+		border-bottom: 1.5px solid black;
+
+		.logo {
+			color: white;
+		}
+
+		// Nav List
+		.nav-list {
+			display: flex;
+			gap: 150px;
+		}
+
+		#buttons {
+			display: none;
+			#menu {
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				fill: white;
+			}
+
+			#exit {
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				fill: white;
+			}
+		}
+	}
+
+	.mobile-nav {
+		width: 100%;
+		text-align: center;
+
+		// Color of your choice
+		background-color: rgb(32, 156, 238);
+
+		transition: 1s;
+
+		.mobile_nav-list {
+			display: flex;
+			flex-direction: column;
+
+			// List items for mobile
+			.mobile-item {
+				padding: 20px;
+				border-bottom: 1.5px solid rgb(32, 117, 228);
+			}
+		}
+	}
+}
+
+// Toggle Classes
+.inactiveMobile {
+	position: absolute;
+	z-index: -1;
+	top: -170px;
+}
+
+.activeMobile {
+	position: absolute;
+	z-index: -1;
+	top: 90px;
+}
+
+// Media Queries
+@media screen and (max-width: 995px) {
+	.nav-list {
+		display: none !important;
+	}
+
+	#buttons {
+		position: relative;
+		display: block !important;
+
+		#exit {
+			display: none;
+		}
+	}
+}
