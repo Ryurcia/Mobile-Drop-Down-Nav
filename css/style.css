@@ -65,10 +65,10 @@ a:visited {
 }
 
 .header-container .mobile-nav {
+  position: relative;
   width: 100%;
   text-align: center;
   background-color: #209cee;
-  transition: 1s;
 }
 
 .header-container .mobile-nav .mobile_nav-list {
@@ -82,15 +82,15 @@ a:visited {
 }
 
 .inactiveMobile {
-  position: absolute;
+  position: relative;
   z-index: -1;
-  top: -170px;
+  display: none;
 }
 
 .activeMobile {
-  position: absolute;
+  position: relative;
   z-index: -1;
-  top: 90px;
+  display: block;
 }
 
 @media screen and (max-width: 995px) {

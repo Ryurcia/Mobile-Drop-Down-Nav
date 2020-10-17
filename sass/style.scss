@@ -75,13 +75,12 @@ a {
 	}
 
 	.mobile-nav {
+		position: relative;
 		width: 100%;
 		text-align: center;
 
 		// Color of your choice
 		background-color: rgb(32, 156, 238);
-
-		transition: 1s;
 
 		.mobile_nav-list {
 			display: flex;
@@ -98,15 +97,15 @@ a {
 
 // Toggle Classes
 .inactiveMobile {
-	position: absolute;
+	position: relative;
 	z-index: -1;
-	top: -170px;
+	display: none;
 }
 
 .activeMobile {
-	position: absolute;
+	position: relative;
 	z-index: -1;
-	top: 90px;
+	display: block;
 }
 
 // Media Queries
