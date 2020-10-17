@@ -22,7 +22,6 @@ burger.addEventListener('click', (e) => {
 
 //Add Event Listeners to Drop Down
 mobile.addEventListener('click',(e) => {
-    console.log(e.target);
     if(e.target.classList.contains('item')) {
         mobile.classList.toggle('activeMobile');
         mobile.classList.toggle('inactiveMobile');
@@ -31,7 +30,6 @@ mobile.addEventListener('click',(e) => {
         menu.style.display = "block";
     }
 })
-
 
 
 
