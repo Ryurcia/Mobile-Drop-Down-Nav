@@ -98,13 +98,13 @@ a {
 // Toggle Classes
 .inactiveMobile {
 	position: relative;
-	z-index: -1;
+	z-index: 0;
 	display: none;
 }
 
 .activeMobile {
 	position: relative;
-	z-index: -1;
+	z-index: 0;
 	display: block;
 }
 
