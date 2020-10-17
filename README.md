@@ -1,6 +1,6 @@
 # Drop Down Nav for mobile
 
-Animated Nav menu written in HTML SCSS/CSS and Vanilla JS. Anyone can use and incorperate this in their websites.
+Simple Drop Down Nav menu written in HTML SCSS/CSS and Vanilla JS. Anyone can use and incorperate this in their websites.
 
 ![Nav Menu](/images/inactive.png)
 ![Nav Menu](/images/active.png)
