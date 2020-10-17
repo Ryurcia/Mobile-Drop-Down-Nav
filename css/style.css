@@ -84,13 +84,13 @@ a:visited {
 .inactiveMobile {
   position: relative;
   z-index: 0;
-  display: none;
+  display: none !important;
 }
 
 .activeMobile {
   position: relative;
   z-index: 0;
-  display: block;
+  display: block !important;
 }
 
 @media screen and (max-width: 995px) {
@@ -103,5 +103,11 @@ a:visited {
   }
   #buttons #exit {
     display: none;
+  }
+}
+
+@media screen and (min-width: 995px) {
+  .mobile-nav {
+    display: none !important;
   }
 }

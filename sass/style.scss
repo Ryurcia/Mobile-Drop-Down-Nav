@@ -99,13 +99,13 @@ a {
 .inactiveMobile {
 	position: relative;
 	z-index: 0;
-	display: none;
+	display: none !important;
 }
 
 .activeMobile {
 	position: relative;
 	z-index: 0;
-	display: block;
+	display: block !important;
 }
 
 // Media Queries
@@ -121,5 +121,12 @@ a {
 		#exit {
 			display: none;
 		}
+	}
+}
+
+// Nav dissapears if browser is resized
+@media screen and (min-width: 995px) {
+	.mobile-nav {
+		display: none !important;
 	}
 }
