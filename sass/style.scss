@@ -10,123 +10,88 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-// a tags in li
 a {
-	//Your choice of color
-	color: white;
+	color: black;
 	text-decoration: none;
 
-	// Get rid of purple color when visited
 	&:visited {
-		color: white;
+		color: black;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		outline: none;
 	}
 }
 
-// items in Ul
-.nav-item {
-	font-size: 1.2rem;
-	list-style: none;
-	text-transform: uppercase;
-	font-weight: 500;
-}
+//Nav
+.nav {
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px 50px;
 
-// Header
-.header-container {
-	.nav {
-		width: 100%;
-		height: 5.625rem;
-		margin: auto;
-		padding: 0px 50px;
+	background-color: coral; //Your color choice
 
+	transition: height 2s;
+
+	.logo {
+		font-size: 2rem; //You can change the size to your liking
+	}
+
+	.nav-items {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		// Color of your choice
-		background-color: rgb(32, 156, 238);
-		border-bottom: 1.5px solid black;
-
-		.logo {
-			color: white;
-		}
-
-		// Nav List
-		.nav-list {
-			display: flex;
-			gap: 150px;
-		}
-
-		#buttons {
-			display: none;
-			#menu {
-				width: 30px;
-				height: 30px;
-				cursor: pointer;
-				fill: white;
-			}
-
-			#exit {
-				width: 30px;
-				height: 30px;
-				cursor: pointer;
-				fill: white;
-			}
-		}
 	}
 
-	.mobile-nav {
-		position: relative;
-		width: 100%;
-		text-align: center;
-
-		// Color of your choice
-		background-color: rgb(32, 156, 238);
-
-		.mobile_nav-list {
-			display: flex;
-			flex-direction: column;
-
-			// List items for mobile
-			.mobile-item {
-				padding: 20px;
-				border-bottom: 1.5px solid rgb(32, 117, 228);
-			}
-		}
+	.nav-link {
+		font-size: 1.2rem;
+		padding: 0px 50px;
 	}
 }
 
-// Toggle Classes
-.inactiveMobile {
-	position: relative;
-	z-index: 0;
-	display: none !important;
-}
+// Buttons
+.open {
+	width: 30px;
+	height: 30px;
 
-.activeMobile {
-	position: relative;
-	z-index: 0;
-	display: block !important;
+	display: none;
 }
 
 // Media Queries
-@media screen and (max-width: 995px) {
-	.nav-list {
-		display: none !important;
+@media screen and (max-width: 835px) {
+	.nav {
+		max-height: 80px;
+		transition: max-height 0.3s ease-out;
+		overflow: hidden;
+	}
+	.nav-items {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+
+		padding-top: 30px;
 	}
 
-	#buttons {
-		position: relative;
+	.nav-link {
+		width: 100%;
+		padding: 10px !important;
+		margin: auto;
+		border-top: 1px solid black;
+	}
+
+	.open {
 		display: block !important;
-
-		#exit {
-			display: none;
-		}
+		cursor: pointer;
 	}
-}
 
-// Nav dissapears if browser is resized
-@media screen and (min-width: 995px) {
-	.mobile-nav {
-		display: none !important;
+	// Animations
+	.mobileMenu {
+		max-height: 275px !important;
 	}
 }
