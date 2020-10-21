@@ -1,35 +1,20 @@
-// Icons
-const burger = document.querySelector('#buttons');
-const exit = document.getElementById('exit');
-const menu = document.getElementById('menu');
+//Nav Components
+const nav = document.querySelector('.nav');
+const openMenu = document.querySelector('.open');
+const navItem = document.querySelector('.nav-items');
 
-// Nav
-const mobile = document.querySelector('.mobile-nav');
+openMenu.addEventListener('click', () => {
+    nav.classList.toggle('mobileMenu');
+});
 
-//Add Event Listeners to Hamburger Menu icon
-burger.addEventListener('click', (e) => {
-    mobile.classList.toggle('activeMobile');
-    mobile.classList.toggle('inactiveMobile');
-
-    if(e.target.classList.contains('open')) {
-        menu.style.display = "none";
-        exit.style.display = "block";
-    }else if(e.target.classList.contains('close')) {
-        exit.style.display = "none";
-        menu.style.display = "block";
+navItem.addEventListener('click', (e) => {
+    if(e.target.classList.contains('nav-link')) {
+        nav.classList.toggle('mobileMenu');
     }
-})
+});
 
-//Add Event Listeners to Drop Down
-mobile.addEventListener('click',(e) => {
-    if(e.target.classList.contains('item')) {
-        mobile.classList.toggle('activeMobile');
-        mobile.classList.toggle('inactiveMobile');
 
-        exit.style.display = "none";
-        menu.style.display = "block";
-    }
-})
+
 
 
 
