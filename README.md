@@ -2,8 +2,9 @@
 
 Simple Drop Down Nav menu written in HTML SCSS/CSS and Vanilla JS. Anyone can use and incorperate this in their websites.
 
-![Nav Menu](/images/inactive.png)
-![Nav Menu](/images/active.png)
+![Nav Menu](/images/desktop.png)
+![Nav Menu](/images/mobile.png)
+![Nav Menu](/images/mobile2.png)
 
 # Use
 1. Download or Copy code into your project(s)
